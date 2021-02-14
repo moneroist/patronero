@@ -1,0 +1,8 @@
+xmrig
+tabs/__pycache__/
+utils/__pycache__/
+__pycache__/
+build/
+dist/
+icon.ico
+patronero.spec

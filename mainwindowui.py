@@ -13,16 +13,15 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
+        MainWindow.resize(500, 500)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.tabs = QtWidgets.QTabWidget(self.centralwidget)
+        self.tabs.setObjectName("tabs")
+        self.verticalLayout.addWidget(self.tabs)
         MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
