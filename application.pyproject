@@ -1,3 +1,3 @@
 {
-    "files": ["application.py"]
+    "files": ["application.py","mainwindowui.py","mainwindow.py","utils/messagebox.py","tabs/protegestabui.py","utils/utils.py","utils/validation.py","tabs/miningpoolstab.ui","tabs/protegestab.py","tabs/protegestab.ui","tabs/generaltabui.py","utils/config.py","tabs/generaltab.py","tabs/miningpoolstabui.py","mainwindow.ui","tabs/miningpoolstab.py","tabs/generaltab.ui","utils/miner.py"]
 }

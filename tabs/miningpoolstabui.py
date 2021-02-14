@@ -10,13 +10,14 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(400, 300)
-        self.verticalLayout = QtWidgets.QVBoxLayout(Form)
+class Ui_MiningPoolsTab(object):
+    def setupUi(self, MiningPoolsTab):
+        MiningPoolsTab.setObjectName("MiningPoolsTab")
+        MiningPoolsTab.resize(400, 300)
+        self.verticalLayout = QtWidgets.QVBoxLayout(MiningPoolsTab)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.tableWidget = QtWidgets.QTableWidget(Form)
+        self.tableWidget = QtWidgets.QTableWidget(MiningPoolsTab)
+        self.tableWidget.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.tableWidget.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
         self.tableWidget.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.tableWidget.setObjectName("tableWidget")
@@ -28,16 +29,19 @@ class Ui_Form(object):
         self.tableWidget.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(2, item)
+        self.tableWidget.horizontalHeader().setDefaultSectionSize(200)
         self.tableWidget.horizontalHeader().setStretchLastSection(True)
+        self.tableWidget.verticalHeader().setVisible(False)
         self.verticalLayout.addWidget(self.tableWidget)
-        self.removeButton = QtWidgets.QPushButton(Form)
+        self.removeButton = QtWidgets.QPushButton(MiningPoolsTab)
         self.removeButton.setObjectName("removeButton")
         self.verticalLayout.addWidget(self.removeButton)
-        self.groupBox = QtWidgets.QGroupBox(Form)
+        self.groupBox = QtWidgets.QGroupBox(MiningPoolsTab)
         self.groupBox.setObjectName("groupBox")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.groupBox)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.formLayout = QtWidgets.QFormLayout()
+        self.formLayout.setHorizontalSpacing(40)
         self.formLayout.setObjectName("formLayout")
         self.nameLabel = QtWidgets.QLabel(self.groupBox)
         self.nameLabel.setObjectName("nameLabel")
@@ -57,20 +61,20 @@ class Ui_Form(object):
         self.verticalLayout_2.addWidget(self.addButton)
         self.verticalLayout.addWidget(self.groupBox)
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(MiningPoolsTab)
+        QtCore.QMetaObject.connectSlotsByName(MiningPoolsTab)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, MiningPoolsTab):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        MiningPoolsTab.setWindowTitle(_translate("MiningPoolsTab", "Form"))
         item = self.tableWidget.horizontalHeaderItem(0)
-        item.setText(_translate("Form", "Id"))
+        item.setText(_translate("MiningPoolsTab", "Id"))
         item = self.tableWidget.horizontalHeaderItem(1)
-        item.setText(_translate("Form", "Name"))
+        item.setText(_translate("MiningPoolsTab", "Name"))
         item = self.tableWidget.horizontalHeaderItem(2)
-        item.setText(_translate("Form", "URL"))
-        self.removeButton.setText(_translate("Form", "Remove"))
-        self.groupBox.setTitle(_translate("Form", "New Mining Pool"))
-        self.nameLabel.setText(_translate("Form", "Name"))
-        self.urlLabel.setText(_translate("Form", "URL"))
-        self.addButton.setText(_translate("Form", "Add"))
+        item.setText(_translate("MiningPoolsTab", "URL"))
+        self.removeButton.setText(_translate("MiningPoolsTab", "Remove"))
+        self.groupBox.setTitle(_translate("MiningPoolsTab", "New Mining Pool"))
+        self.nameLabel.setText(_translate("MiningPoolsTab", "Name"))
+        self.urlLabel.setText(_translate("MiningPoolsTab", "URL"))
+        self.addButton.setText(_translate("MiningPoolsTab", "Add"))
